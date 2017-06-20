@@ -1,6 +1,14 @@
-import sum from './sum.js';
-import './image_viewer/image_viewer';
 
-const total = sum.getSum(12, 5);
-console.log("Total: ", total);
-console.log("Test: ", sum.test());
+const button = document.createElement('button');
+button.innerText = 'Click Me';
+button.onclick = () => {
+	System.import('./image_viewer/image_viewer').then(module => {
+		module = module.default;
+		console.log("module:", module);
+		module.addSmallImage();
+	});
+};
+
+document.body.appendChild(button);
+document.body.appendChild(document.createElement('br'));
+document.body.appendChild(document.createElement('br'));
