@@ -1,3 +1,6 @@
-const sum = (a, b) => (a + b);
+const getSum = (a, b) => (a + b);
 
-module.exports = sum;
+export default {
+    getSum,
+    test: () => { return "Test Output"; }
+};
