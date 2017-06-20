@@ -1,5 +1,8 @@
 node_modules
 /.idea
-
-
 *.log
+
+# Lesson 1
+build
+node_modules
+
